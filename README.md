@@ -1,18 +1,29 @@
-# Named Entity Recognition
-
+# EX 6 Named Entity Recognition
 ## AIM
-
 To develop an LSTM-based model for recognizing the named entities in the text.
 
 ## Problem Statement and Dataset
+We propose a deep neural network (NN) architecture, namely the bidirectional Long-Short Term Memory (Bi-LSTM) based model for NER. Based on existing gold standard datasets, we evaluated and compared several models for identifying biomedical-named entities. Our deep NN-based Bi-LSTM model using word and character level embeddings outperforms CRF and Bi-LSTM using only word-level embeddings significantly.
+
+![image](https://github.com/user-attachments/assets/54b52612-247d-4686-9668-0eb0f24dfd46)
 
 
-### Design Steps:
-- Step:1 Import necessary libraries like pandas, NumPy, and TensorFlow/Keras.   
-- Step:2 Read the dataset and use forward fill to handle null values.
-- Step:3 Create lists of unique words and tags, and count the number of unique entries
-- Step:4 Build dictionaries mapping words and tags to their corresponding index values.
-- Step:5 Construct a model using Input, Embedding, Bidirectional LSTM, Spatial Dropout, and Time Distributed Dense layers, then compile it for training with the dataset.
+## DESIGN STEPS
+### Step 1: 
+Import the necessary packages.
+### Step 2: 
+Read the dataset, and fill the null values using forward fill.
+### Step 3: 
+Create a list of words, and tags. Also find the number of unique words and tags in the dataset.
+### Step 4: 
+Create a dictionary for the words and their Index values. Do the same for the tags as well,Now we move to moulding the data for training and testing.
+### Step 5: 
+We do this by padding the sequences,This is done to acheive the same length of input data.
+### Step 6: 
+We build a build a model using Input, Embedding, Bidirectional LSTM, Spatial Dropout, Time Distributed Dense Layers.
+### Step 7: 
+We compile the model and fit the train sets and validation sets,We plot the necessary graphs for analysis, A custom prediction is done to test the model manually.
+
 ## PROGRAM
 ### Name: SATHISH R
 ### Register Number: 212222230138
@@ -136,5 +147,5 @@ for w, true, pred in zip(X_test[i], y_true, p[0]):
 ![Screenshot 2024-10-17 205710](https://github.com/user-attachments/assets/8d860f94-80a0-4623-acbd-ff769165a68b)
 
 
-
 ## RESULT
+Thus, an LSTM-based model for recognizing the named entities in the text is successfully developed.
